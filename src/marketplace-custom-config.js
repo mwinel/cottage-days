@@ -93,6 +93,24 @@ export const filters = [
     },
   },
   {
+    id: 'view',
+    label: 'View',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_view'],
+    config: {
+      // Schema type is enum for SelectSingleFilter
+      schemaType: 'enum',
+      options: [
+        { key: 'sea', label: 'Sea' },
+        { key: 'lake', label: 'Lake' },
+        { key: 'forest', label: 'Forest' },
+        { key: 'garden', label: 'Garden' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
     id: 'amenities',
     label: 'Amenities',
     type: 'SelectMultipleFilter',
@@ -109,8 +127,8 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         {
-          key: 'towels',
-          label: 'Towels',
+          key: 'terrace',
+          label: 'Terrace',
         },
         {
           key: 'bathroom',
@@ -121,24 +139,24 @@ export const filters = [
           label: 'Swimming pool',
         },
         {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
-        },
-        {
           key: 'jacuzzi',
           label: 'Jacuzzi',
         },
         {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
+          key: 'lake_view',
+          label: 'Lake view',
+        },
+        {
+          key: 'sea_view',
+          label: 'Sea view',
         },
         {
           key: 'barbeque',
           label: 'Barbeque',
         },
         {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
+          key: 'fireplace',
+          label: 'Fireplace',
         },
       ],
     },
